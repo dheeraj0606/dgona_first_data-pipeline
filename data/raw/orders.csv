@@ -1,0 +1,4 @@
+order_id,customer,product,quantity,price,date
+1,John,Apple,2,1.2,2026-01-01
+2,Alice,Banana,5,0.8,2026-01-02
+3,Bob,Orange,3,1.5,2026-01-03
