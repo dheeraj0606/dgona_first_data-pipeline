@@ -1,7 +1,11 @@
 import pandas as pd
+from config.config import PROCESSED_PATH, FINAL_OUTPUT_PATH
 
 # Load cleaned data
-df = pd.read_csv("data/processed/orders_preview.csv")
+#df = pd.read_csv("data/processed/orders_preview.csv")
+df = pd.read_csv(PROCESSED_PATH)
+
+df.to_csv(FINAL_OUTPUT_PATH, index=False)
 
 # Create revenue column
 df["revenue"] = df["quantity"] * df["price"]
