@@ -1,0 +1,11 @@
+Raw CSV Data
+    ↓
+Ingestion Script
+    ↓
+Cleaning Script
+    ↓
+Metrics Script
+    ↓
+Processed Dataset
+
+
