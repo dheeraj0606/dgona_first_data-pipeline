@@ -1,14 +1,16 @@
 import pandas as pd
+import logging
 from config.config import RAW_DATA_PATH, PROCESSED_PATH
 
+logging.basicConfig(level=logging.INFO)
+
+logging.info("Reading raw data...")
 df = pd.read_csv(RAW_DATA_PATH)
 
-# Simple cleaning
+logging.info("Cleaning data...")
 df = df.dropna()
-df["quantity"] = df["quantity"].astype(int)
-df["price"] = df["price"].astype(float)
 
 df.to_csv(PROCESSED_PATH, index=False)
 
-print("Data cleaned and saved!")
+logging.info("Cleaned data saved!")
 
