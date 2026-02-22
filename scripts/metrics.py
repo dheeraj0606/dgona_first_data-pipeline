@@ -22,3 +22,17 @@ print("\n📊 Business Metrics:")
 print(f"Total Revenue: ${total_revenue}")
 print(f"Total Orders: {total_orders}")
 print(f"Top Product by Revenue: {top_product}")
+
+
+def compute_metrics(file_path):
+    df = pd.read_csv(file_path)
+
+    return {
+        "total_rows": len(df),
+        "total_quantity": df["quantity"].sum(),
+        "avg_price": df["price"].mean()
+    }
+
+if __name__ == "__main__":
+    metrics = compute_metrics("../data/processed/orders_final.csv")
+    print(metrics)
