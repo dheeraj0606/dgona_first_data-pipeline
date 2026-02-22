@@ -1,11 +1,10 @@
 import pandas as pd
 
-# Load raw CSV
-orders = pd.read_csv("../data/raw/orders.csv")
+df = pd.read_csv("data/processed/orders_preview.csv")
 
-# Preview data
-print("Preview of orders dataset:")
-print(orders.head())
-
-# Optional: Save to processed folder
-orders.to_csv("../data/processed/orders_preview.csv", index=False)
+print("Total Revenue:")
+df["revenue"] = df["quantity"] * df["price"]
+print(df["revenue"].sum())
+s
+print("\nRevenue by product:")
+print(df.groupby("product")["revenue"].sum())

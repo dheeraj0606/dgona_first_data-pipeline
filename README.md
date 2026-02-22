@@ -16,3 +16,9 @@ This week focuses on:
 
 ## Status
 Project started — Week 1
+
+## Pipeline Steps
+
+1. Ingest raw CSV
+2. Clean data
+3. Generate analytics
