@@ -41,6 +41,9 @@ config/
 - Data quality checks  
 
 
+## CI/CD
+
+This project uses GitHub Actions to automatically run tests on every push.
 
 
 
